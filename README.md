@@ -317,12 +317,11 @@ temperature of the land,
    - MOD21A2 LST&E 8-day level 3 Global 1 km
    - MOD21_L2 Daily 5-min level 2 swath 1 km
 
-(MOD14) MODIS Thermal Anomalies -- Active Fire
-
-    - 4 and 11 um radiance. Just 2 bands
-    - MOD14A1 : daily level 3 global 1 km 
-    - MOD14A2 : 8-day level 3 global 1 km
-    - MOD14   : 5-min level 2 swath 1 km
+(MOD14) MODIS Thermal Anomalies, Active Fire
+  - 4 and 11 um radiance. Just 2 bands
+  - MOD14A1 daily level 3 global 1 km 
+  - MOD14A2 8-day level 3 global 1 km
+  - MOD14   5-min level 2 swath 1 km
 
 ### File types
 
