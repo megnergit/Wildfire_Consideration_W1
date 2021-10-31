@@ -141,8 +141,7 @@ height that this satellite can go, while still resolving 10 m on the
 ground, is
 ```
 10 / (1/3600*3.14/180) = 2.1 x 10^6 m = 2100 km.
-```   
-This is a medium earth orbit, and the orbital period is about 130 min.
+``` This is a medium earth orbit, and the orbital period is about 130 min.
 
 3) __Low Earth Orbit__\
 The satellite can be on the low earth
