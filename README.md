@@ -146,7 +146,7 @@ orbital period at 350 km above the ground is 91 min. If a certain
 place on the earth has to be covered every 15 min, at least
 6-satellites are necessary in the constellation.
 
-#--------------------------------------------------------------
+--------------------------------------------------------------
 
 ## 3. Existing Similar Services in Public
 
@@ -159,7 +159,7 @@ https://gwis.jrc.ec.europa.eu/apps/gwis_current_situation/index.html
 (EFFIS) The European Forest Fire Information System
 https://effis.jrc.ec.europa.eu
 
-#--------------------------------------------------------------
+--------------------------------------------------------------
 
 ## 4. Satellites and Projects
 
@@ -216,13 +216,12 @@ high spatial resolution and infrared sensitivity, but the launch is not
 planned before 2029.
 
 __Conclusions:--\
-
 As a proof of concept, we will see if we can retrieve MODIS data from
 its data server by a Python script (as opposed to a manual web-based
 GUI).
 
-#-------------------------------------------------------------- #
-#5. Data Access 
+-------------------------------------------------------------- 
+## 5. Data Access 
 
 ### First I need to vent
 
@@ -348,8 +347,7 @@ temperature of the land,
      + I do not understand the differences from NetCDF
      + It also has `xml` representation. 
    
-__Conclusion:__ \
-
+__Conclusion:__\
    1. MOD11A1.
    2. MOD21A1 is better.
    3. MOD14A1 will make  a 'test set' to our experiments
@@ -407,8 +405,7 @@ rom its server.
     - cannot open a session in the original presentation, but 
     - can work around.
 
---Conclusion:__ \
-
+__Conclusion:__\ 
 1. Get to MODIS Data products https://modis.gsfc.nasa.gov/data/dataprod/
 2. Click on MOD21.
 3. Select MOD21A1D
@@ -634,7 +631,7 @@ is attached.
   - Use `HDFView` to see if a HDF file is correctly retrieved.
 
 
-#--------------------------------------------------------------
+--------------------------------------------------------------
 
 ## 10. To-Do
 
