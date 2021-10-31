@@ -633,7 +633,8 @@ is attached.
    - Useful to make a calibration plan. 
 
 [MODIS Calibrated Radiances](https://modis.gsfc.nasa.gov/data/dataprod/mod02.php)
-'''
+
+```
 The Level 1B data set contains calibrated and geolocated at-aperture
 radiances for 36 bands generated from MODIS Level 1A sensor counts
 (MOD 01). The radiances are in W/(m2-µm-sr). In addition, reflectance
@@ -642,7 +643,7 @@ through knowledge of the solar irradiance (e.g., determined from MODIS
 solar-diffuser data, and from the target-illumination
 geometry). Additional data are provided, including quality flags,
 error estimates, and calibration data.
-'''
+```
 
 5. Calculate the temperatures.
    - Create band-temperature templates. 
