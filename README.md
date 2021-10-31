@@ -152,11 +152,10 @@ place on the earth has to be covered every 15 min, at least
 The following two would be the similar public services that report
 wildfires as fast as possible.
 
-__[GWID](https://gwis.jrc.ec.europa.eu/apps/gwis_current_situation/index.html)__
-(Global Wildfire Information System)
-
-__[EFFIS][(ttps://effis.jrc.ec.europa.eu)__
-(The European Forest Fire Information System)
+__GWID__
+[Global Wildfire Information System](https://gwis.jrc.ec.europa.eu/apps/gwis_current_situation/index.html)__\
+__EFFIS__
+[The European Forest Fire Information System](https://effis.jrc.ec.europa.eu)
 
 
 <!-------------------------------------------------------------->
