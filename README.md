@@ -632,10 +632,8 @@ is attached.
      (Algorithm Theoretical Basis Documents)
    - Useful to make a calibration plan. 
 
+[MODIS Calibrated Radiances](https://modis.gsfc.nasa.gov/data/dataprod/mod02.php)
 '''
-MODIS Calibrated Radiances
-https://modis.gsfc.nasa.gov/data/dataprod/mod02.php
-
 The Level 1B data set contains calibrated and geolocated at-aperture
 radiances for 36 bands generated from MODIS Level 1A sensor counts
 (MOD 01). The radiances are in W/(m2-µm-sr). In addition, reflectance
