@@ -8,9 +8,10 @@ monitoring from the space. We will first present an overview of the
 current status of the field, including similar public systems working
 now. The second half of the text is dedicated to the data engineering.
 We will discuss what kind of data sources are available, and how we
-can extract the data from there. We will perform an experiment
-retrieving the data from a MODIS data server with Python-base script
-not with a GUI on the web) with a proper authentication.
+can extract the data from there. We will perform an experiment on
+retrieving the data from a MODIS server with a Python-base script (as
+opposed to a manual, web/GUI-base download) with a proper
+authentication.
 
 My preliminary conclusions are that such a regional system would
 suffer from one or two of the following problems. 
@@ -24,35 +25,37 @@ suffer from one or two of the following problems.
 For the discussions behind the conclusion above,
 jump to ## 9. System Design Considerations.
 
--------------------------------------------------------------
+<!------------------------------------------------------------->
 ## 2. Overview
 
-Here we present some research on the landscape of the wildfire alarming
-system. My expectations were that such systems are already available,
-at multiple institutes in multiple industrialized countries. Landsat,
-for instance, has been taking pictures for 50 years by now, and the
-wildfire is of the immediate interest not only of the public but also
-of the business. After acute and repeating threats in California, in
-Greece, in Australia, you would not have any trouble to find a sponsor
-to finance a wildfire detection program. However, it actually took me
-hours to reach such public alarming systems on the web. Many of the
-projects that are related to the forest/wildfire are not for the
-detection, but either one of the two below.
+Here we present a research on the landscape of the state-of-the-art
+wildfire alarming system. My expectations were that such systems are
+already available, at multiple institutes in multiple industrialized
+countries. Landsat, for instance, has been taking pictures for 50
+years by now, and the wildfire is of the immediate interest not only
+of the public but also of the business. After acute and repeating
+threats in California, in Greece, in Australia, you would not have any
+trouble to find a sponsor to finance a wildfire detection
+program. However, it actually took me hours to reach such public
+alarming systems on the web. Many of the projects that are related to
+the forest/wildfire are not really for the detection, but either one
+of the two below.
 
-1. __Forecast :__ evaluate the threats from the amount of the dry
-   vegetations (=fuel) that are prone to catch fire. The merit of such
-   projects are to advise the authorities where to invest the
-   money and man power for the efficient prevention. 
+1. __Forecast :__ evaluate the wildfire threats from the amount of the
+   dry vegetations (=fuel) that are prone to catch fire. The merit of
+   such projects are to advise the authorities where to invest the
+   money and the man power for the efficient preventions.
    
-2. __Evaluation :__  of the aftermath of the fires. This is critically
+2. __Evaluation :__ of the aftermath of the fires. This is critically
    important for the insurance payments not only for individuals, but
-   for the agricultural industry.
+   also for the agricultural industry.
 
 At first, I was puzzled. The fast alarm would be a question that one
 can monetize most easily. Why this topic looks almost circumvented?
-My speculation is that it is __technically challenging__ or nearly
-impossible, although everyone indeed would like to tackle. The
-following is the line of thought.
+
+My understanding after some research is, that indeed everbody wants to
+tackle the fast alarm, but it is __technically highly challenging__ or
+nearly impossible. The following is the line of thought.
 
 1. __Wavelength :__  The temperature of the flames of the fire on wood
 is 600-1500 K. The temperature range, if they are blackbody,
