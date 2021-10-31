@@ -122,14 +122,15 @@ resolution), still need 4k x 4k infrared detector. It costs minimum
 200k Euro, and more if we include readout electronics, drivers,
 cryogenics (heatsinks) and so on.
 
-1) __Geostationary orbit__\
+1) __Geostationary Orbit__\
 The orbit is 36000 km above the ground. The angular resolution needed
 to resolve 10 m on the ground is, 10m/36000 km / (1/3600*3.14/180) =
 0.05 arcsec = 50 mas. To achieve this angular resolution at 2.2 um,
 the satellite has to have a telescope with a diameter of 8-m. That is
 impossible.
 
-2) __20-cm telescope__\ We will set the size of the telescope
+2) __20-cm telescope__\ 
+We will set the size of the telescope
 20-cm. The diffraction-limited angular-resolution of the telescope is
 2 arcsec at 2.2 um. The maximum height that this satellite can
 go, while still resolving 10 m on the ground, is
@@ -140,7 +141,8 @@ go, while still resolving 10 m on the ground, is
 
 This is a medium earth orbit, and the orbital period is about 130 min.
 
-3) __Low Earth Orbit__\ The satellite can be on the low earth
+3) __Low Earth Orbit__\
+The satellite can be on the low earth
 orbit. This is the orbit where Landsats and ISS are working. The
 orbital period at 350 km above the ground is 91 min. If a certain
 place on the earth has to be covered every 15 min, at least
@@ -547,8 +549,8 @@ is attached.
 
 ### Hardware
 
-1. None of the existing satellites are fully optimized for the fast
-   alarming of the wildfire. There are many systems for the forecast
+1. None of the existing satellites are fully optimized for a fast
+   alarming of the wildfire. There are many systems for the forecasting
    (warning) and the evaluation (of the damage), but not the detection
    of it.
 
@@ -556,20 +558,21 @@ is attached.
 
    + temporal resolution 10-15 min.
    + spatial resolution 10 m
-   + temperature sensitivity 600-1500K which is 2 to 5 um
+   + temperature sensitivity 600-1500 K which is 2 to 5 um
      in the wavelength.
 
    This is in the order of difficulty to suffice. 
 
-3. Need near-infrared sensitivity (2.2 um) to be detect the blackbody
-   radiation of the temperature 1500K. If possible thermal infrared (>
-   3um 1000K) is desired.
+3. Need near-infrared sensitivity (2.2 um) to detect the blackbody
+  radiation of the temperature 1500 K. If possible, thermal infrared (>
+  3um 1000K) is desired.
 
-4. Wide-format infrared detector array necessary. Minimun 4k by 4k.
+4. Wide-format infrared detector array necessary. Minimum 4k by 4k.
 
-5. Geo-stationary orbit is impossbile because of the spatial
-   resolution needed. Either in the medium (>2000 km) or the low earth
-   (200-2000 km) orbits are feabislbe.
+5. Geostationary orbit is impossible because of the spatial
+   resolution needed for looking from over there. Either 
+   in the medium (>2000 km) or the low earth 
+   (200-2000 km) orbits are realistic. 
 
 6. At a medium earth orbit at 2000 km above the ground, a telescope
    with 20-cm diameter would suffice to resolve 10 m on the ground
@@ -577,38 +580,39 @@ is attached.
    diameter becomes smaller with the height of the orbit.
 
 7. The higher the orbit, the simultaneous coverage of the land is
-   larger (depending on the size of the detector installed). Germany
-   spans about 1000 km across. Need a fast telescope even on the
+   larger (depending on the size of the detector installed, though). 
+   Germany spans about 1000 km across. Need a fast telescope even on the
    medium earth orbit to cover the whole land.
 
 8. The higher the orbit, need a larger infrared detector array. If one
    would like to resolve 80 km x 80 km area (about Munich-Augsburg
    distance) with 10 m resolution, we need 8k x 8k infrared detector
-   array. One chip (4k x 4x) would cost 200k Euro.
+   array. One quadrant (4k x 4x) would cost 200k Euro.
 
-9. The orbital priods of the low and the medium earth orbits do not
+9. The orbital periods of the low and the medium earth orbits do not
    differ too much (the radius of the earth is dominant), and are
    90-130 min. Depending on the required temporal resolution, a
    constellation of the satellites with more than 6 machines is
-   neccessary.
+   necessary.
 
 ### Software
 
-10. A blackbody/graybody fitting at each pixels costs computing
-    resoutces. Band-flux tempaltes for grids of tempearture to
-    caluclate a quick cross-correalation would make the data
+10. A blackbody/graybody fitting at each pixel costs computing
+    resources. Band-flux templates for grids of temperatures to
+    quickly calculate a cross-correlation would make the data
     processing faster.
 
-11. Pottential challnges in building a data analysis system are
+11. Potential challenges in building a data analysis system are
 
-   - optical depth of the flames
-   - filling factors of the flames
-   - varrying filing factors with flames with temperature (=wavelength)
+   - Optical depths of the flames
+   - Filling factors of the flames
+   - Varying filling factors with flames with temperature (=wavelength)
 
-   All can tweak the true tempearture of the fire. 
+   All can tweak the true temperature of the fire. 
 
-12. Calibration documentats for MODIS is available on the internet,
-    and useful for building an in-house calibration system as well.
+12. Calibration documents for MODIS data is available on the internet.
+    They should be useful for building an in-house calibration system 
+    as well.
 
 ### Data Pipeline Experiment
 
@@ -617,15 +621,15 @@ is attached.
 
 2. Data access system in the earth observing community is a mess.
 
-3. Non-GUI path of retrieval of MODIS Data goes as follows.
+3. Non-GUI path of the retrieval of MODIS Data goes as follows.
 
-  - Go to 'Data Pool' of NASA Earthdata webpage to identiry the file
+  - Go to 'Data Pool' of NASA Earthdata webpage to identify the file
     and its location.
 
-  - Register yourself as a user of Earthdata to get an username and
-    passowrd for the authentication.
+  - Register yourself as a user on Earthdata to get an username and
+    password for the authentication.
 
-  - Use Python package `requests` to retrieve the data. Need the
+  - Use Python package `requests` to retrieve the data. Need an
     authentication.
 
   - Use `HDFView` to see if a HDF file is correctly retrieved.
