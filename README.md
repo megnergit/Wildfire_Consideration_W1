@@ -259,7 +259,7 @@ only the small fraction of them, as I encountered on the way.
 
 #### EU
 
-- __[Sentinel Data Access__](https://sentinel.esa.int/web/sentinel/sentinel-data-access)
+- [__Sentinel Data Access__](https://sentinel.esa.int/web/sentinel/sentinel-data-access)
 
 - [__Copernicus Open Access Hub__](https://scihub.copernicus.eu)
 
@@ -303,8 +303,8 @@ temperature of the land,
   - MOD11A2 LST&E 8-day level 3 Global 1 km
   - MOD11_L2 Daily 5-min level 2 swath 1 km
 
-  - Data Access : https://lpdaac.usgs.gov/products/mod11a1v061/ => to 
-  - User Guide : https://icess.eri.ucsb.edu/modis/LstUsrGuide/usrguide_1dtil.html
+  - [Data Access](https://lpdaac.usgs.gov/products/mod11a1v061/) 
+  - [User Guide](https://icess.eri.ucsb.edu/modis/LstUsrGuide/usrguide_1dtil.html)
 
 (MOD21) MODIS Land Surface Temperature and Emissivity (MOD21) (LST&E)
   Difference from MOD11
@@ -317,9 +317,9 @@ temperature of the land,
    - MOD21A2 LST&E 8-day level 3 Global 1 km
    - MOD21_L2 Daily 5-min level 2 swath 1 km
 
-(MOD14) MODIS Thermal Anomalies - Active Fire
-    - 4 and 11 um radiance. Just 2 bands
+(MOD14) MODIS Thermal Anomalies -- Active Fire
 
+    - 4 and 11 um radiance. Just 2 bands
     - MOD14A1 : daily level 3 global 1 km 
     - MOD14A2 : 8-day level 3 global 1 km
     - MOD14   : 5-min level 2 swath 1 km
