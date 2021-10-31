@@ -247,46 +247,38 @@ only the small fraction of them, as I encountered on the way.
 - [__Earthdata__](https://lpdaac.usgs.gov/products/mod11a1v006/) (USGS)
   + One can learn which MODIS data to use for a project.
 
-- (MODIS Data Products)
-  https://modis.gsfc.nasa.gov/data/dataprod/
+- [__MODIS Data Products__](https://modis.gsfc.nasa.gov/data/dataprod/)
 
-- (LANCE) Land, Atmosphere Near-real-time Capability for EOS (NASA)
-   https://lance4.modaps.eosdis.nasa.gov/modis/
+- [__LANCE__](https://lance4.modaps.eosdis.nasa.gov/modis/) Land, Atmosphere Near-real-time Capability for EOS (NASA)
    + MODIS-NRT1 (Terra) [MODIS-NRT2 is Aqua]
-   + NRT (near real time. 3-5 hours)
-   https://nrt4.modaps.eosdis.nasa.gov/archive/allData/61/MOD11_L2/Recent   
+   + [NRT](https://nrt4.modaps.eosdis.nasa.gov/archive/allData/61/MOD11_L2/Recent)  (near real time. 3-5 hours)
 
-- (MODAPS Services)
-   https://modaps.modaps.eosdis.nasa.gov/services/about/nomenclature.html
+- [__MODAPS Services__](https://modaps.modaps.eosdis.nasa.gov/services/about/nomenclature.html)
    + Just too many of them.
    + Documentation is good. 
 
-#### [EU]
+#### EU
 
-- (Sentinel Data Access)
-   https://sentinel.esa.int/web/sentinel/sentinel-data-access
+- __[Sentinel Data Access__](https://sentinel.esa.int/web/sentinel/sentinel-data-access)
 
-- (Copernicus Open Access Hub)
-   https://scihub.copernicus.eu
+- [__Copernicus Open Access Hub__](https://scihub.copernicus.eu)
 
-- (GWIS) Global Wildfire Information System (GEO + Copernicus)
-   https://gwis.jrc.ec.europa.eu/applications/data-and-services
+- [__GWIS__](https://gwis.jrc.ec.europa.eu/applications/data-and-services)
+   Global Wildfire Information System (GEO + Copernicus)
    + Data already reduced to text tables. 
    + No raw images. 
 
-- (HLS) Harmonized Landsat and Sentinel-2
-   https://hls.gsfc.nasa.gov
+- [__HLS__](https://hls.gsfc.nasa.gov)
+   Harmonized Landsat and Sentinel-2
 
 __Conclusions:__
-
 1. We will concentrate on MODIS data, and its data products
   - Calibrated and reduced, instead of raw images
   - Images, instead of tabulated data.
-
 2. Download it from the internet from python script
    (not with GUI).
 
---------------------------------------------------------------
+<!-------------------------------------------------------------->
 
 ## 6. Identify Available Files and What We Need
 
