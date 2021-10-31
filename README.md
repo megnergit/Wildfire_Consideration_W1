@@ -334,7 +334,8 @@ temperature of the land,
      + I do not understand the differences from NetCDF
      + It also has `xml` representation. 
    
-__Conclusion:__\
+__Conclusion:__
+
    1. MOD11A1.
    2. MOD21A1 is better.
    3. MOD14A1 will make  a 'test set' to our experiments
@@ -342,7 +343,7 @@ __Conclusion:__\
       the wildfire. 
    4. Let us look at HDF files first. 
 
---------------------------------------------------------------
+<!-------------------------------------------------------------->
 ## 7. Data Access Points
 
 There are at least 7 different ways to retrieve MODIS MOD21A1 data 
@@ -352,12 +353,11 @@ rom its server.
 
 2. NASA Earthdata Search : GUI base => drop
 
-3. Daac2Disk : a small data-transfer program available on here
-   https://lpdaac.usgs.gov/tools/daac2diskscripts/
-   The program takes care of authentication. 
+3. [Daac2Disk](https://lpdaac.usgs.gov/tools/daac2diskscripts/)
+    : a small data-transfer program available on here
+    The program takes care of authentication. 
 
-   (User Manual)
-   https://lpdaac.usgs.gov/documents/202/DAAC2DiskUserGuide_QSeQHbQ.pdf
+   [User Manual](https://lpdaac.usgs.gov/documents/202/DAAC2DiskUserGuide_QSeQHbQ.pdf)
 
    + On MacOSX, we need to set a special permission in 'System Preference'
      -> 'Security & Privacy' to download the script and run it locally.
@@ -367,33 +367,30 @@ rom its server.
    definition of them.
    
 
-4. LDOPE : Land Data Operational Products Evaluation
-   https://lpdaac.usgs.gov/tools/ldope/
+4. [LDOPE](https://lpdaac.usgs.gov/tools/ldope/) : Land Data Operational Products Evaluation
 
    + On MacOSX, we need to set a special permission in 'System
    Preference' -> 'Security & Privacy' to download the installer.
  
    + Installer for mac does not run. => drop
 
-5. OPenDAP   : GUI base => drop
-   https://lpdaac.usgs.gov/tools/opendap/
-   https://earthdata.nasa.gov/collaborate/open-data-services-and-software/api/opendap/opendap-user-guide
+5. [OPenDAP](https://lpdaac.usgs.gov/tools/opendap/)
+   - [User Guide](https://earthdata.nasa.gov/collaborate/open-data-services-and-software/api/opendap/opendap-user-guide)
    - directory structure with no explanation
    - web service => drop
 
-6. Pydap 
-   https://wiki.earthdata.nasa.gov/display/EL/How+To+Access+Data+With+PyDAP
+6. [Pydap](https://wiki.earthdata.nasa.gov/display/EL/How+To+Access+Data+With+PyDAP)
     - documentation too old
     + a few python packages used there do not exist any more.
     - could not open a session
 
-7. Python/requests 
-   https://wiki.earthdata.nasa.gov/display/EL/How+To+Access+Data+With+Python
+7. [Python/requests](https://wiki.earthdata.nasa.gov/display/EL/How+To+Access+Data+With+Python)
     - cannot open a session in the original presentation, but 
     - can work around.
 
-__Conclusion:__\ 
-1. Get to MODIS Data products https://modis.gsfc.nasa.gov/data/dataprod/
+__Conclusion:__
+
+1. Get to [MODIS Data products](https://modis.gsfc.nasa.gov/data/dataprod/)
 2. Click on MOD21.
 3. Select MOD21A1D
 4. 'ACCESS DATA' at a menu-bar under the banner.
@@ -407,8 +404,7 @@ __Conclusion:__\
 8. Go down to the end of the page
    + Record starts from 2000.02.24.
 
-9. See MODAPS Services to learn what the file names mean.
-https://modaps.modaps.eosdis.nasa.gov/services/about/nomenclature.html
+9. See [MODAPS Services](https://modaps.modaps.eosdis.nasa.gov/services/about/nomenclature.html( to learn what the file names mean.
 
 ```
 Generalized Filenaming Convention
@@ -417,19 +413,12 @@ MOD01.A2002032.1015.003.2002034184356.hdf
  
 aaaaa  bbbbccc dddd eee fffffffffffff ggg
 a) MODIS product short name, e.g. "MOD01" refers to the MODIS Level 1A Radiance product. "MOD" signifies Terra/MODIS, whereas "MYD" signifies Aqua/MODIS.
-
 b) Year in which data was collected by the instrument, e.g. 2002.
-
 c) Day on which data was collected by the instrument, given in Day of Year. For example, "032" is February 1st, i.e. the 32nd day of the year.
-
 d) Time at which data was collected, given in Universal Time Coordinate (UTC) or Greenwich Mean Time (GMT).
-
 e) Collection (version) number.
-
 f) Production date and time, given in year, day-of-year, hours, minutes, and seconds, in the form yyyydddhhmmss.
-
 g) File type extension, e.g. "hdf" is Hierarchical Data Format. All MODIS data are available in HDF format.
-
 ```
 10. Okay, let us target the following file.   
 
@@ -443,9 +432,9 @@ FILENAME : MOD21A1D.A2021301.h35v10.061.2021303035120.hdf
 
 ### Authentication
 
-Accessing data through Earthdata requires a user registration.
-https://urs.earthdata.nasa.gov
-Just pick up a username, a password, and your e-mail address.  Nothing
+Accessing data through Earthdata requires a user
+[registration](https://urs.earthdata.nasa.gov).  Just pick up a
+username, a password, and your e-mail address.  Nothing
 complicated. You will get a confirmation e-mail.  The __Username__ and
 __Password__ will be used in the authentication in the Python script
 below.
@@ -508,20 +497,16 @@ if __name__ == '__main__':
 
 '''
 
-### How to run the demo
-
+### How to run the code
 ```
 > python3 exp_modis1.py [USERNAME] [PASSWORD]
-
 ```
 Replace `[USERNAME]` and `[PASSWORD]` with your own.
 
 ### HDFView
 
 To check the contents of an HDF file that we download to the local
-machine, get a quick HDF viewer, `HDFView`.
-
-https://portal.hdfgroup.org/display/support/Download+HDFView
+machine, get a quick HDF viewer, [`HDFView`](https://portal.hdfgroup.org/display/support/Download+HDFView).
 
    + On MacOSX we need to set a permission at 'System Preference'
     -> 'Security & Privacy' to run the app.
@@ -529,7 +514,7 @@ https://portal.hdfgroup.org/display/support/Download+HDFView
 I can see the metadata, but it is not clear if any imaging data
 is attached. 
      
---------------------------------------------------------------
+<!-------------------------------------------------------------->
 ## 9. System Design Considerations
 
 ### Hardware
@@ -620,7 +605,7 @@ is attached.
   - Use `HDFView` to see if a HDF file is correctly retrieved.
 
 
---------------------------------------------------------------
+<!-------------------------------------------------------------->
 
 ## 10. To-Do
 
@@ -643,9 +628,8 @@ is attached.
 
 4. Try raw (but flux-calibrated) images.
    - there is an interesting documents about ATBT.\
-     __ATBD__ (Algorithm Theoretical Basis Documents)
-     https://modis.gsfc.nasa.gov/data/atbd/
-
+     [__ATBD__](https://modis.gsfc.nasa.gov/data/atbd/)
+     (Algorithm Theoretical Basis Documents)
    - Useful to make a calibration plan. 
 
 '''
@@ -674,6 +658,6 @@ error estimates, and calibration data.
 
 9. Sentinel-2
 
-==============================================================
-# END
+------------------
+## END
 
