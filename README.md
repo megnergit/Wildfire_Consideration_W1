@@ -146,7 +146,7 @@ orbital period at 350 km above the ground is 91 min. If a certain
 place on the earth has to be covered every 15 min, at least
 6-satellites are necessary in the constellation.
 
---------------------------------------------------------------
+<!-------------------------------------------------------------->
 
 ## 3. Existing Similar Services in Public
 
@@ -159,7 +159,7 @@ https://gwis.jrc.ec.europa.eu/apps/gwis_current_situation/index.html
 (EFFIS) The European Forest Fire Information System
 https://effis.jrc.ec.europa.eu
 
---------------------------------------------------------------
+<!-------------------------------------------------------------->
 
 ## 4. Satellites and Projects
 
