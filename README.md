@@ -217,7 +217,7 @@ As a proof of concept, we will see if we can retrieve MODIS data from
 its data server by a Python script (as opposed to a manual web-based
 GUI).
 
--------------------------------------------------------------- 
+<!--------------------------------------------------------------> 
 ## 5. Data Access 
 
 ### First I need to vent
@@ -243,9 +243,8 @@ half-minded maintenance status.
 There are somehow lots of outlets for same data. The followings are
 only the small fraction of them, as I encountered on the way.
 
-#### [US]
-- (Earthdata) (USGS)
-  https://lpdaac.usgs.gov/products/mod11a1v006/
+#### US
+- [__Earthdata__](https://lpdaac.usgs.gov/products/mod11a1v006/) (USGS)
   + One can learn which MODIS data to use for a project.
 
 - (MODIS Data Products)
