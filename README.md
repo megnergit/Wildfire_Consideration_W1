@@ -140,7 +140,7 @@ go, while still resolving 10 m on the ground, is
 
 This is a medium earth orbit, and the orbital period is about 130 min.
 
-3) __Low Earth Orbit__ \ The satellite can be on the low earth
+3) __Low Earth Orbit__\ The satellite can be on the low earth
 orbit. This is the orbit where Landsats and ISS are working. The
 orbital period at 350 km above the ground is 91 min. If a certain
 place on the earth has to be covered every 15 min, at least
