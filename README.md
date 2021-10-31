@@ -1,24 +1,24 @@
-# Wildfire Fast Alaming System - Is it feasible? 
+# Wildfire Fast Alarming System - Is it feasible? 
 
 ## 1. Summary and Conclusion
 
-The purpose of the text is to think through the feasiblity of a
+The purpose of the text is to think through the feasibility of a
 regional, fast, wildfire alarming-system that is based on the
 monitoring from the space. We will first present an overview of the
-current status of the field, including simlar public systems working
+current status of the field, including similar public systems working
 now. The second half of the text is dedicated to the data engineering.
-We will discuss what kind of data sources are availalbe, and how we
+We will discuss what kind of data sources are available, and how we
 can extract the data from there. We will perform an experiment
 retrieving the data from a MODIS data server with Python-base script
 not with a GUI on the web) with a proper authentication.
 
-My preliminary conclusions are that such a reginoal system would
+My preliminary conclusions are that such a regional system would
 suffer from one or two of the following problems. 
 
 1. The telescope must be too big (~8m)
 2. The number of satellites in the constellation is too many (> 6)
 3. The size of the infrared array is too large and expensive (100k x 100k)
-4. The area to be covered is too small and a regional goverment cannot
+4. The area to be covered is too small and a regional government cannot
    fund the project. 
 
 For the discussions behind the conclusion above,
@@ -27,100 +27,102 @@ jump to ## 9. System Design Considerations.
 -------------------------------------------------------------
 ## 2. Overview
 
-Here we present some research on the landscape of teh wildife alaming
+Here we present some research on the landscape of the wildfire alarming
 system. My expectations were that such systems are already available,
-at multiple institues in multiple industrialized coutries. Landsat,
+at multiple institutes in multiple industrialized countries. Landsat,
 for instance, has been taking pictures for 50 years by now, and the
-wildfire is of the immeidate interest not only of the public but also
-of the business. After accute and repeating threats in California, in
+wildfire is of the immediate interest not only of the public but also
+of the business. After acute and repeating threats in California, in
 Greece, in Australia, you would not have any trouble to find a sponsor
 to finance a wildfire detection program. However, it actually took me
 hours to reach such public alarming systems on the web. Many of the
 projects that are related to the forest/wildfire are not for the
-detection, but either one of two below.
+detection, but either one of the two below.
 
-1. __Forecast__ : evaluate the threats from the amount of the dry
-   vegetations that are prone to catch fire. The merit of such
-   projects are to advise the forest authorities where to invest the
-   money and man power for the prevention. 
+1. __Forecast :__ evaluate the threats from the amount of the dry
+   vegetations (=fuel) that are prone to catch fire. The merit of such
+   projects are to advise the authorities where to invest the
+   money and man power for the efficient prevention. 
    
-2. __Evaluation__ : of the aftermath of the fires. This is critically
+2. __Evaluation :__  of the aftermath of the fires. This is critically
    important for the insurance payments not only for individuals, but
    for the agricultural industry.
 
-At first, I was puzzled. The fast alarm would be the concern that one
+At first, I was puzzled. The fast alarm would be a question that one
 can monetize most easily. Why this topic looks almost circumvented?
-My speculation is that it is __technically hard__ or nearly
+My speculation is that it is __technically challenging__ or nearly
 impossible, although everyone indeed would like to tackle. The
 following is the line of thought.
 
-1. __Wavelength__. The tempearture of the flames of the fire on wood
-is 600-1500K. The temperature range, if they are blackbody,
-corresponds to the the emitting power peaking at the wavelengths 2--5
-um. This is __near to thermal infrated__. The satelite imaging has
-been performed in the visible walength (lambda < 1um), in particular,
-for the millitary/intelligence purposes. There are plethora of
-satellites on the sky, but only the minor part of them are sensitive
-to the near-infrared, with even smaller part of them to the thermal
-infrared. Infrared equippements/cameras/spectrometers call for much
-harder challenges in terms of the cryogenics than visible instruments.
+1. __Wavelength :__  The temperature of the flames of the fire on wood
+is 600-1500 K. The temperature range, if they are blackbody,
+corresponds to the the emitting radiation peaking at the wavelengths 
+2--5 um. This is __near to thermal infrared__. The satellite imaging 
+has been performed in the visible wavelength (lambda < 1um) traditionally, 
+in particular, for the military/intelligence purposes. There are 
+plethora of satellites on the sky, but only the minor fraction of them 
+are sensitive in the near-infrared, with even smaller part of them 
+to the thermal infrared. Infrared equipments/cameras/spectrometers 
+set much higher hurdles in terms of the cryogenics, which is not an issue 
+in the visible instruments.
 
-2. __Spatial Resolution__. In order to effictively use the satellite
-imagery for the fast alarm, i.e., the satellite imagery must report a
-fire faster than the people on the ground would do -- the spatial
-resolution is critical. In order to get a fire detected, the size of
-the fire must be as large as the spatial/(angular) resolution of the
-camera. I assume that the fire must fill, or nearly fill, the whole
-one pixel of the detector to get caught. Currently only a few newest
-satellites have the spatial resolutions of ~10 m sclae, with majority
-of them, 300m-1km. If a wildfire is 300m wide, I suspect a
+
+2. __Spatial Resolution :__ In order to be effective in using 
+the satellite imagery for the fast alarm, i.e., the satellite 
+imagery must report a fire faster than the people on the ground 
+would do -- the spatial resolution is critical. In order to get a 
+fire detected, the fire must fill, or nearly fill, the whole
+one pixel of the detector. Currently only a few newest satellites 
+have the spatial resolutions of ~10 m scale, with majority
+of them, 300 m to 1 km. If a wildfire is 300 m wide, I suspect a
 ground-based technique could report it faster.
 
-3. __Temporal Resolution__. I suspect this is the most critical issue
-that makes the fast wildfire alarm-sytem from the space nearly
-impossible. We will discuss later, but obserbing the earth from the
+3. __Temporal Resolution :__ I suspect this is the most critical issue
+that makes the fast wildfire alarm-system from space nearly
+impossible. We will discuss later, but observing the earth from the
 geo-synchronous orbit is nearly impossible. The majority of the earth
 observing systems are on the low earth orbit (height < 2000km). With a
 tilted orbit, it takes at least a day, if not a week, that a satellite
 can come back to one location again, and notices something is
 different (=fire). The choice of the orbit is in a sense
-intentional. A satelite project is funded by a county (US) or a group
-of countries (EU). Such satellites have to cover wide areas, and if we
+intentional. A satellite project is funded by a country (US) or a group
+of countries (EU). The satellites have to cover wide areas, and if we
 would like to keep the spatial resolution high enough (therefore
 cannot be in the high orbits), the satellite has to move around to
 cover the entire scope.
 
-Because of the techinical challenges discussed above, there is indeed
-a gap to close with a __regioal__, fast wildfire alarming system.  To
-differenciate from existing systems, the service has to have
+Because of the technical challenges discussed above, there is indeed
+a gap to close with a __regional__, fast wildfire alarming system.  To
+differentiate from existing systems, the service has to have
 approximately the following specs. 
 
 1. High cadence in monitoring (15 minutes ideal, longest with one hour
-of interval). The satellites must be watching a same area
-continuously, or have to come back frequent enough. The operation
-would be expensive, and indeed suits for micro satellite systems.
+   of intervals). The satellites must be watching a same area
+   continuously, or have to come back frequent enough. The operation
+   would be expensive, and indeed suits for micro satellite systems.
 
-2. Thermal wavelength (> 3 um). The longer the wavelenth, the lower
-the temperature a heat source to get caught. This means that the lead
-time for the flame detection will be shorter. One can also live with
-2.2 um, which is enough to catch the fire of the temperature 1500K.
+2. Thermal wavelength (> 3 um) sensitivity. The longer the wavelength, 
+   the lower the temperature a heat source to get caught. This means 
+   that the lead time for the flame detection will be shorter. One can 
+   also live with 2.2 um, which is enough to catch the fire of 
+   the temperature 1500 K.
 
 3. Spatial resolution should not be significantly worse than 10 m.
-This will be the compromise among
+   This will be set by the compromises among
 
-  - Height of the satellite orbit.
-  - Size of the detector
-  - Area to cover
+    - Height of the satellite orbit
+    - Size of the detector
+    - Area to cover
 
 Just a quick calculation. In order to cover Attica (a region in Greece
 where Athen is located. About 84 km wide) with 10 m pixel scale, the
-detector must be 8400px times 8400px large. If we aim for using ultra
+detector must be 8400 px times 8400 px large. If we are to use ultra
 resolution technique (using half-pixel shifts to attain twice higher
 resolution), still need 4k x 4k infrared detector. It costs minimum
 200k Euro, and more if we include readout electronics, drivers,
-cyogenics (heatsinks) and so on.
+cryogenics (heatsinks) and so on.
 
-1) __Geostaionary orbit__\
+1) __Geostationary orbit__\
 The orbit is 36000 km above the ground. The angular resolution needed
 to resolve 10 m on the ground is, 10m/36000 km / (1/3600*3.14/180) =
 0.05 arcsec = 50 mas. To achieve this angular resolution at 2.2 um,
@@ -129,7 +131,7 @@ impossible.
 
 2) __20-cm telescope__\ We will set the size of the telescope
 20-cm. The diffraction-limited angular-resolution of the telescope is
-2 arcsec at 2.2 um. The maximum height of the orbit this satellite can
+2 arcsec at 2.2 um. The maximum height that this satellite can
 go, while still resolving 10 m on the ground, is
 
 ```
@@ -142,14 +144,14 @@ This is a medium earth orbit, and the orbital period is about 130 min.
 orbit. This is the orbit where Landsats and ISS are working. The
 orbital period at 350 km above the ground is 91 min. If a certain
 place on the earth has to be covered every 15 min, at least
-6-satellites are neccesary in the constellation.
+6-satellites are necessary in the constellation.
 
 #--------------------------------------------------------------
 
 ## 3. Existing Similar Services in Public
 
 The following two would be the similar public services that report
-wildfires as fast as opssible.
+wildfires as fast as possible.
 
 (GWID) Global Wildfire Information System
 https://gwis.jrc.ec.europa.eu/apps/gwis_current_situation/index.html
@@ -161,24 +163,24 @@ https://effis.jrc.ec.europa.eu
 
 ## 4. Satellites and Projects
 
-What kind satellites are available as a resouce for the wildfire
-detection? It is by no means easy to get an overview of the current and
-the historical missions that have long lineage by now. We need the
-following information below for each mission, 
+What kind satellites are available as a resource for the wildfire
+detection? It is by no means easy to get a good overview of the 
+current and the historical missions that have long lineage by now. 
+We need the following information below for each.
 
 - name 
-- start of opertion/ end of operation /if it is in operation
-- bands / near-infrared covered? (2.2 um)/thermal infrad covered? (>3 um)
+- start of operation/ end of operation /if it is in operation
+- bands / near-infrared covered? (2.2 um)/thermal infrared covered? (>3 um)
 - spatial resolution
 - temporal resolution
-- is europe covered?
+- is Europe covered?
 - is data publicly available?
 - is data flux-calibrated?
 - is data available in (near) real time? 
 
-After some survey, we found that the following are the rellevant
-satellites that are currently in opertation, is working infrared, and
-their data is publicly available.
+After some survey, we found that the followings are the relevant satellites
+for our mission, and that are currently in operation, are working in the 
+infrared,  and their data is publicly available.
 
 ### US : Earth-Observing System
 
@@ -201,43 +203,44 @@ https://nifc.maps.arcgis.com/home/item.html?id=dece90af1a0242dcbf0ca36d30276aa3
 ### EU: Sentinel project (formally known as 'Copernicus')
 
 (Sentinel 2) 
-- Wavelnegth up to 2.2 um
+- Wavelength up to 2.2 um
 - Spatial resolution 10-60m
 
 (Sentinel 3)
-- Wavelenth up to 11 um (SLSTR)
-- Sptaial resolution 500 - 1km
+- Wavelength up to 11 um (SLSTR)
+- Spatial resolution 500 - 1km
 
 Other Sentinels are either not on the sky yet, or do not have infrared
-sensitivity. Most hopeful future addition is __Setinel 8__, which has
-high spatial resolution and infrared sensitvity, but the launch is not
+sensitivity. Most hopeful future addition is __Sentinel 8__, which has
+high spatial resolution and infrared sensitivity, but the launch is not
 planned before 2029.
 
 __Conclusions:--\
 
-As a proof of concept, we will see if we can retrive MODIS data from
+As a proof of concept, we will see if we can retrieve MODIS data from
 its data server by a Python script (as opposed to a manual web-based
 GUI).
 
 #-------------------------------------------------------------- #
-#5. Data Access
+#5. Data Access 
 
-### First I need to vent.
+### First I need to vent
 
-The data access in the earth observation industy is a mess. In
+The data access in the earth observation industry is a mess. In
 particular in the US. The reasons are the following.
 
-1. Too much money to fund new projects.  2. Old projects are not
-deprecated.  3. Two many govermental agentcies in play (ocean, land-,
-geo-, space, civil-, agri-, intel- and more)
+1. Too much money to fund new projects.  
+2. Old projects are not deprecated.  
+3. Two many governmental agencies in play \
+   (ocean, land-, geo-, space, civil-, agri-, intel- and more).
 
 The result is too many redundant systems where it is not even clear
 which one is the latest. I do understand researchers do not like to
 close the working systems at their local institutes. However, offering
 (and keeping the maintenance of) perl/shell-script-base systems to the
 public just dilutes already sparse man power even sparser. One can see
-numerous non-working solutions still on their internet with
-half-minded maintainance status.
+numerous non-working solutions still on their web sites with
+half-minded maintenance status.
 
 ### Data Servers
 
@@ -290,22 +293,22 @@ __Conclusions:__
 
 --------------------------------------------------------------
 
-## 6. Identify Availalbe Files and What We Need
+## 6. Identify Available Files and What We Need
 
 ### Goal of data engineering
 
-Originaly, I wanted finish until 5 in the To-Do list at the end of the
-report (=calculating the temperature pixel by pixel), but it took me
-too long to get the latest status of the field. Here I will
-concentrate on extracting the data. We will first identify which files
-we need.
+Originally, I wanted to finish until 5 in the To-Do list at the 
+end of this report (=calculating the temperature pixel by pixel), 
+but it took me too long to get the latest status of the field. 
+Here I will concentrate on extracting the data. We will first 
+identify which files we need.
 
-###  What datasets are avilable, and which one we need
+###  What datasets are available, and which one we need
 
 MODIS data consists of numerous [product
-lines](https://modis.gsfc.nasa.gov/data/dataprod/). Just pick up a few
-that are related to the wildfire and the surface temperature of the
-land,
+lines](https://modis.gsfc.nasa.gov/data/dataprod/). Just picking up a few
+products that are related to the wildfire and the surface 
+temperature of the land,
 
 (MOD11) MODIS Land Surface Temperature and Emissivity (LST&E)
   + Bands 31 and 32.
@@ -319,7 +322,7 @@ land,
 (MOD21) MODIS Land Surface Temperature and Emissivity (MOD21) (LST&E)
   Difference from MOD11
    - Bands 29, 31, 32
-   - 3-5K bias in MOD11 is corercted
+   - 3-5 K bias in MOD11 is corrected
    - Full radiation transfer implemented (from ASTER project)
 
    - MOD21A1D LST&E daily level-3 Global 1 km Day
@@ -332,24 +335,24 @@ land,
 
     - MOD14A1 : daily level 3 global 1 km 
     - MOD14A2 : 8-day level 3 global 1 km
-    - MOD14   : 5-min level 2 swqth 1 km
+    - MOD14   : 5-min level 2 swath 1 km
 
 ### File types
 
    Which file type we should retrieve? 
    
    - `NetCDF` (Network Common Data Form)
-     + standard in the earth obseving community
+     + standard in the earth observing community
    - `NcML` represents metadata part of `NetCDF` in `xml`
-   - `HDF4` and `HDF5` (Hieralchical Data Format)
-     + I do not undrstand the differeces from NetCDF
+   - `HDF4` and `HDF5` (Hierarchical Data Format)
+     + I do not understand the differences from NetCDF
      + It also has `xml` representation. 
    
 __Conclusion:__ \
 
    1. MOD11A1.
    2. MOD21A1 is better.
-   3. MOD14A1 will make  a 'testset' to our experiments
+   3. MOD14A1 will make  a 'test set' to our experiments
       that provides 'ground truth' of the presence of
       the wildfire. 
    4. Let us look at HDF files first. 
@@ -357,16 +360,16 @@ __Conclusion:__ \
 --------------------------------------------------------------
 ## 7. Data Access Points
 
-There are at least 7 differnet ways to retrieve MODIS MOD21A1 from its
-data server.
+There are at least 7 different ways to retrieve MODIS MOD21A1 data 
+rom its server.
 
-1. Data Pool : this leads to LP DAAC (LP: Land Process)
+1. Data Pool : this leads users to LP DAAC (LP: Land Process)
 
 2. NASA Earthdata Search : GUI base => drop
 
 3. Daac2Disk : a small data-transfer program available on here
    https://lpdaac.usgs.gov/tools/daac2diskscripts/
-   The program takes care of authntication. 
+   The program takes care of authentication. 
 
    (User Manual)
    https://lpdaac.usgs.gov/documents/202/DAAC2DiskUserGuide_QSeQHbQ.pdf
@@ -375,8 +378,8 @@ data server.
      -> 'Security & Privacy' to download the script and run it locally.
    + Make the program executable by `chmod +x Daac2Dick_mac'
 
-   Need 'shortname' to search the files, but could not find either the
-   definition of the shortnames.
+   Need 'shortname' to search the files, but could not find the
+   definition of them.
    
 
 4. LDOPE : Land Data Operational Products Evaluation
@@ -444,7 +447,7 @@ f) Production date and time, given in year, day-of-year, hours, minutes, and sec
 g) File type extension, e.g. "hdf" is Hierarchical Data Format. All MODIS data are available in HDF format.
 
 ```
-10. Okay, let us target  downloading the folloing file.   
+10. Okay, let us target the following file.   
 
 ```
 URL : https://e4ftl01.cr.usgs.gov/MOLT/MOD21A1D.061/2021.10.28/
@@ -458,7 +461,6 @@ FILENAME : MOD21A1D.A2021301.h35v10.061.2021303035120.hdf
 
 Accessing data through Earthdata requires a user registration.
 https://urs.earthdata.nasa.gov
-
 Just pick up a username, a password, and your e-mail address.  Nothing
 complicated. You will get a confirmation e-mail.  The __Username__ and
 __Password__ will be used in the authentication in the Python script
@@ -468,7 +470,7 @@ below.
 ### Python Script
 
 It took me long to reach here, but the code itself is short.
-Here is the entier code.
+Here is the entire code.
 
 '''
 import pdb
@@ -528,7 +530,7 @@ if __name__ == '__main__':
 > python3 exp_modis1.py [USERNAME] [PASSWORD]
 
 ```
-Replace `[USERNAME]` and `[PASSWORE]` with your own.
+Replace `[USERNAME]` and `[PASSWORD]` with your own.
 
 ### HDFView
 
@@ -540,7 +542,7 @@ https://portal.hdfgroup.org/display/support/Download+HDFView
    + On MacOSX we need to set a permission at 'System Preference'
     -> 'Security & Privacy' to run the app.
 
-I can see the methadata, but it is not clear if any imagery data
+I can see the metadata, but it is not clear if any imaging data
 is attached. 
      
 --------------------------------------------------------------
@@ -638,14 +640,14 @@ is attached.
 
 1. Look at the contents of HDF files closer
    - show images with Python script
-   - fidn how to manipulate array data
+   - find how to manipulate array data
    - `astropy`?
 
-2. Study how to set seach criteria so that we can freely select
+2. Study how to set search criteria so that we can freely select
    the files we want. Such as
 
    - Munich-Augsburg area (or California/Turkey/Greece), 
-   - In our favored time preriod. 
+   - In our favored time priod. 
 
 3. Try NRT (near real-time) data.
 
@@ -677,7 +679,7 @@ error estimates, and calibration data.
 5. Calculate the temperatures.
    - Create band-temperature templates. 
 
-6. Alart system.
+6. Alert system.
    - calculate the difference/anomaly, and raise the flag.
 
 7. Frontend. 
@@ -686,6 +688,6 @@ error estimates, and calibration data.
 
 9. Sentinel-2
 
-#==============================================================
+==============================================================
 # END
-#==============================================================
+
