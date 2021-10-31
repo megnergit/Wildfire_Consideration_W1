@@ -121,21 +121,21 @@ where Athen is located. About 84 km wide) with 10 m pixel scale, the
 detector must be 8400 px times 8400 px large. If we are to use ultra
 resolution technique (using half-pixel shifts to attain twice higher
 resolution), still need 4k x 4k infrared detector. It costs minimum
-200k Euro, and more if we include readout electronics, drivers,
+200k Euro, and more, if we include readout electronics, drivers,
 cryogenics (heatsinks) and so on.
 
 1) __Geostationary Orbit__\
 The orbit is 36000 km above the ground. The angular resolution needed
 to resolve 10 m on the ground is, 10m/36000 km / (1/3600*3.14/180) =
-0.05 arcsec = 50 mas. To achieve this angular resolution at 2.2 um,
+0.05 arcsec, or 50 mas. To achieve this angular resolution at 2.2 um,
 the satellite has to have a telescope with a diameter of 8-m. That is
 impossible.
 
-2) __20-cm telescope__\ 
-We will set the size of the telescope
-20-cm. The diffraction-limited angular-resolution of the telescope is
-2 arcsec at 2.2 um. The maximum height that this satellite can
-go, while still resolving 10 m on the ground, is
+2) __20-cm telescope__\
+We will set the size of the telescope 20-cm. The diffraction-limited
+angular-resolution of the telescope is 2 arcsec at 2.2 um. The maximum
+height that this satellite can go, while still resolving 10 m on the
+ground, is
 
 ```
 10 / (1/3600*3.14/180) = 2.1 x 10^6 m = 2100 km.
