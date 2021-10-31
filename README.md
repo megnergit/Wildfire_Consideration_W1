@@ -445,7 +445,7 @@ below.
 It took me long to reach here, but the code itself is short.
 Here is the entire code.
 
-'''
+```
 import pdb
 import requests
 import io
@@ -494,8 +494,7 @@ if __name__ == '__main__':
     print(r.text)
     print(r.reason)
 
-
-'''
+```
 
 ### How to run the code
 ```
