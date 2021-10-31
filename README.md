@@ -404,14 +404,13 @@ __Conclusion:__
 8. Go down to the end of the page
    + Record starts from 2000.02.24.
 
-9. See [MODAPS Services](https://modaps.modaps.eosdis.nasa.gov/services/about/nomenclature.html( to learn what the file names mean.
+9. See [MODAPS Services](https://modaps.modaps.eosdis.nasa.gov/services/about/nomenclature.html) to learn what the file names mean.
 
 ```
 Generalized Filenaming Convention
-
 MOD01.A2002032.1015.003.2002034184356.hdf
- 
 aaaaa  bbbbccc dddd eee fffffffffffff ggg
+
 a) MODIS product short name, e.g. "MOD01" refers to the MODIS Level 1A Radiance product. "MOD" signifies Terra/MODIS, whereas "MYD" signifies Aqua/MODIS.
 b) Year in which data was collected by the instrument, e.g. 2002.
 c) Day on which data was collected by the instrument, given in Day of Year. For example, "032" is February 1st, i.e. the 32nd day of the year.
@@ -427,7 +426,7 @@ URL : https://e4ftl01.cr.usgs.gov/MOLT/MOD21A1D.061/2021.10.28/
 FILENAME : MOD21A1D.A2021301.h35v10.061.2021303035120.hdf 
 ```
 
---------------------------------------------------------------
+<!-------------------------------------------------------------->
 ## 8. Coding
 
 ### Authentication
