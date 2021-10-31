@@ -126,22 +126,17 @@ cryogenics (heatsinks) and so on.
 
 1) __Geostationary Orbit__\
 The orbit is 36000 km above the ground. The angular resolution needed
-to resolve 10 m on the ground is,
-```
-10m/36000 km / (1/3600*3.14/180) = 0.05 arcsec,
-```
-or 50 mas. To achieve this angular resolution at 2.2 um, the satellite
-has to have a telescope with a diameter of about 8-m.  That is
-impossible.
+to resolve 10 m on the ground is, 10m/36000 km / (1/3600*3.14/180) =
+0.05 arcsec, or 50 mas. To achieve this angular resolution at 2.2 um,
+the satellite has to have a telescope with a diameter of about 8-m.
+That is impossible.
 
 2) __20-cm Telescope__\
 We shal set the size of the telescope 20-cm. The diffraction-limited
 angular-resolution of the telescope is 2 arcsec at 2.2 um. The maximum
 height that this satellite can go, while still resolving 10 m on the
-ground, is
-```
-10 / (1/3600*3.14/180) = 2.1 x 10^6 m = 2100 km.
-``` This is a medium earth orbit, and the orbital period is about 130 min.
+ground, is 10 / (1/3600*3.14/180) = 2.1 x 10^6 m = 2100 km.
+This is a medium earth orbit, and the orbital period is about 130 min.
 
 3) __Low Earth Orbit__\
 The satellite can be on the low earth
