@@ -53,32 +53,31 @@ of the two below.
 At first, I was puzzled. The fast alarm would be a question that one
 can monetize most easily. Why this topic looks almost circumvented?
 
-My understanding after some research is, that indeed everbody wants to
-tackle the fast alarm, but it is __technically highly challenging__ or
-nearly impossible. The following is the line of thought.
+My understanding after some research is that, indeed everbody wants to
+tackle the fast alarm, but it is __technically highly challenging__,
+or nearly impossible. The following is the line of thought.
 
-1. __Wavelength :__  The temperature of the flames of the fire on wood
+1. __Wavelength :__ The temperature of the flames of the fire on wood
 is 600-1500 K. The temperature range, if they are blackbody,
-corresponds to the the emitting radiation peaking at the wavelengths 
-2--5 um. This is __near to thermal infrared__. The satellite imaging 
-has been performed in the visible wavelength (lambda < 1um) traditionally, 
-in particular, for the military/intelligence purposes. There are 
-plethora of satellites on the sky, but only the minor fraction of them 
-are sensitive in the near-infrared, with even smaller part of them 
-to the thermal infrared. Infrared equipments/cameras/spectrometers 
-set much higher hurdles in terms of the cryogenics, which is not an issue 
+corresponds to the emitting power peaking at the wavelengths 2-5
+um. This is __near__ to __thermal infrared__. The satellite imaging
+has been traditionally performed in the visible wavelength (< 0.8 um),
+in particular, for the military- and intelligence-purposes. There are
+plethora of satellites on the sky, but only the minor fraction of them
+are sensitive in the near-infrared, with even smaller fraction of them
+to the thermal infrared. Infrared equipments/cameras/spectrometers set
+much higher hurdles in terms of the cryogenics, which is not an issue
 in the visible instruments.
 
-
-2. __Spatial Resolution :__ In order to be effective in using 
-the satellite imagery for the fast alarm, i.e., the satellite 
-imagery must report a fire faster than the people on the ground 
-would do -- the spatial resolution is critical. In order to get a 
-fire detected, the fire must fill, or nearly fill, the whole
-one pixel of the detector. Currently only a few newest satellites 
-have the spatial resolutions of ~10 m scale, with majority
-of them, 300 m to 1 km. If a wildfire is 300 m wide, I suspect a
-ground-based technique could report it faster.
+2. __Spatial Resolution :__ In order to be effective in using the
+satellite imagery for the fast alarm, i.e., the satellite imagery must
+report a fire faster than the people on the ground would do --- the
+spatial resolution is critical. In order to get a fire detected, the
+fire must fill, or nearly fill, the whole one pixel of the
+detector. Currently only a few newest satellites have the spatial
+resolutions of ~10 m scale, with majority of them, 300 m to 1 km. If a
+wildfire is 300 m wide, I suspect a ground-based technique could
+report it faster.
 
 3. __Temporal Resolution :__ I suspect this is the most critical issue
 that makes the fast wildfire alarm-system from space nearly
@@ -88,34 +87,34 @@ observing systems are on the low earth orbit (height < 2000km). With a
 tilted orbit, it takes at least a day, if not a week, that a satellite
 can come back to one location again, and notices something is
 different (=fire). The choice of the orbit is in a sense
-intentional. A satellite project is funded by a country (US) or a group
-of countries (EU). The satellites have to cover wide areas, and if we
-would like to keep the spatial resolution high enough (therefore
+intentional. A satellite project is funded by a country (US) or a
+group of countries (EU). The satellites have to cover wide areas, and
+if we would like to keep the spatial resolution high enough (therefore
 cannot be in the high orbits), the satellite has to move around to
-cover the entire scope.
+cover the entire area.
 
 Because of the technical challenges discussed above, there is indeed
 a gap to close with a __regional__, fast wildfire alarming system.  To
 differentiate from existing systems, the service has to have
 approximately the following specs. 
 
-1. High cadence in monitoring (15 minutes ideal, longest with one hour
-   of intervals). The satellites must be watching a same area
+1. High cadence in monitoring (15 minutes ideal, longest one hour of
+   intervals). The satellites must be watching a same area
    continuously, or have to come back frequent enough. The operation
    would be expensive, and indeed suits for micro satellite systems.
 
-2. Thermal wavelength (> 3 um) sensitivity. The longer the wavelength, 
-   the lower the temperature a heat source to get caught. This means 
-   that the lead time for the flame detection will be shorter. One can 
-   also live with 2.2 um, which is enough to catch the fire of 
-   the temperature 1500 K.
+2. Thermal wavelength (> 3 um) sensitivity. The longer the wavelength,
+   the lower the temperature a heat source could be to get
+   caught. This means that the lead time of the flame detection will
+   be shorter. One can also live with 2.2 um, which is enough to catch
+   the fire of the temperature 1500 K.
 
 3. Spatial resolution should not be significantly worse than 10 m.
    This will be set by the compromises among
 
-    - Height of the satellite orbit
-    - Size of the detector
-    - Area to cover
+    - height of the satellite orbit
+    - size of the detector
+    - area to cover
 
 Just a quick calculation. In order to cover Attica (a region in Greece
 where Athen is located. About 84 km wide) with 10 m pixel scale, the
