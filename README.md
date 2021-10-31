@@ -153,7 +153,7 @@ The following two would be the similar public services that report
 wildfires as fast as possible.
 
 __GWID__
-[Global Wildfire Information System](https://gwis.jrc.ec.europa.eu/apps/gwis_current_situation/index.html)__\
+[Global Wildfire Information System](https://gwis.jrc.ec.europa.eu/apps/gwis_current_situation/index.html)\
 __EFFIS__
 [The European Forest Fire Information System](https://effis.jrc.ec.europa.eu)
 
@@ -162,10 +162,10 @@ __EFFIS__
 
 ## 4. Satellites and Projects
 
-What kind satellites are available as a resource for the wildfire
-detection? It is by no means easy to get a good overview of the 
+What kind satellites are available as a resource of the wildfire
+detection? It is by no means simple to get a good overview of the 
 current and the historical missions that have long lineage by now. 
-We need the following information below for each.
+We needed the following informations  for each.
 
 - name 
 - start of operation/ end of operation /if it is in operation
@@ -177,14 +177,13 @@ We need the following information below for each.
 - is data flux-calibrated?
 - is data available in (near) real time? 
 
-After some survey, we found that the followings are the relevant satellites
-for our mission, and that are currently in operation, are working in the 
-infrared,  and their data is publicly available.
+After some research, we found that the followings are the relevant
+satellites for our mission, which are currently in operation, are
+working in the infrared, and their data is publicly available.
 
 ### US : Earth-Observing System
 
-(MODIS) MODerate resolution Imaging Spectroradiometer
-https://nifc.maps.arcgis.com/home/item.html?id=b8f4033069f141729ffb298b7418b653
+__MODIS__ [MODerate resolution Imaging Spectroradiometer](https://nifc.maps.arcgis.com/home/item.html?id=b8f4033069f141729ffb298b7418b653)
 - Consists of two satellites
   + Terra (looking at lands, EOS-AM) shortname of data MOD*
   + Aqua (looking at oceans, EOS-PM) shortname of data MYD* 
@@ -192,8 +191,7 @@ https://nifc.maps.arcgis.com/home/item.html?id=b8f4033069f141729ffb298b7418b653
 - Spatial resolution 500m to 1 km.
 - Global coverage every 1 to 2 days
 
-(VIIRS) Visible Infrared Imaging Radiometer Suite
-https://nifc.maps.arcgis.com/home/item.html?id=dece90af1a0242dcbf0ca36d30276aa3
+__VIIRS__ [Visible Infrared Imaging Radiometer Suite](https://nifc.maps.arcgis.com/home/item.html?id=dece90af1a0242dcbf0ca36d30276aa3)
 - Mid-infrared available (< 13 um)
 - Spatial resolution 375m to 750m.
 - Global coverage every 1 to 2 days
@@ -201,11 +199,11 @@ https://nifc.maps.arcgis.com/home/item.html?id=dece90af1a0242dcbf0ca36d30276aa3
 
 ### EU: Sentinel project (formally known as 'Copernicus')
 
-(Sentinel 2) 
+__Sentinel 2__ 
 - Wavelength up to 2.2 um
 - Spatial resolution 10-60m
 
-(Sentinel 3)
+__Sentinel 3__
 - Wavelength up to 11 um (SLSTR)
 - Spatial resolution 500 - 1km
 
@@ -214,7 +212,7 @@ sensitivity. Most hopeful future addition is __Sentinel 8__, which has
 high spatial resolution and infrared sensitivity, but the launch is not
 planned before 2029.
 
-__Conclusions:--\
+__Conclusions:__\
 As a proof of concept, we will see if we can retrieve MODIS data from
 its data server by a Python script (as opposed to a manual web-based
 GUI).
