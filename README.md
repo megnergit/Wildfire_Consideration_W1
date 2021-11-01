@@ -7,11 +7,11 @@
 3. [Existing Similar Services in Public](Existing Similar Services in Public)
 4. [Satellites and Projects](Satellites and Projects)
 5. [Data Access](Data Access)
-6. [Identify Available Files and What We Need](Identify Available Files and What We Need)
-7. [Data Access Points](#Data-Access-Points)
-8. [Coding](#cCding)
-9. [System Design Considerations](#System-Design-Considerations)
-10. [To-Do](#To-Do)
+6. [Identify Available Files and What We Need](#identify-available-files-and-what-we-need)
+7. [Data Access Points](#data-access-oints)
+8. [Coding](#coding)
+9. [System Design Considerations](#system-design-considerations)
+10. [To-Do](#to-do)
 
 
 ## 1. Summary and Conclusion(#summary)
@@ -37,7 +37,7 @@ suffer from one or two of the following problems.
    fund the project. 
 
 For the discussions behind the conclusion above,
-jump to [9. System Design Considerations](#system_design).
+jump to [9. System Design Considerations](#system-design-considerations).
 
 <!------------------------------------------------------------->
 ## 2. Overview
