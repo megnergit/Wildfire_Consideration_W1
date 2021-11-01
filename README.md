@@ -8,10 +8,10 @@
 4. [Satellites and Projects](Satellites and Projects)
 5. [Data Access](Data Access)
 6. [Identify Available Files and What We Need](Identify Available Files and What We Need)
-7. [Data Access Points](Data Access Points)
-8. [Coding](#coding)
-9. [System Design Considerations](#system-design)
-10. [To-Do](#to-do)
+7. [Data Access Points](#Data-Access-Points)
+8. [Coding](#cCding)
+9. [System Design Considerations](#System-Design-Considerations)
+10. [To-Do](#To-Do)
 
 
 ## 1. Summary and Conclusion(#summary)
@@ -619,7 +619,6 @@ is attached.
 
 
 <!-------------------------------------------------------------->
-{#to-do}
 ## 10. To-Do
 
 1. Look at the contents of HDF files closer
