@@ -9,9 +9,9 @@
 5. [Data Access](Data Access)
 6. [Identify Available Files and What We Need](#identify-available-files-and-what-we-need)
 7. [Data Access Points](#data-access-oints)
-8. [Coding](#coding)
-9. [System Design Considerations](#system-design-considerations)
-10. [To-Do](#to-do)
+8. [Coding](#8-coding)
+9. [System Design Considerations](#9-system-design-considerations)
+10. [To-Do](#10-to-do)
 
 
 ## 1. Summary and Conclusion(#summary)
@@ -441,8 +441,7 @@ FILENAME : MOD21A1D.A2021301.h35v10.061.2021303035120.hdf
 ```
 
 <!-------------------------------------------------------------->
-{#coding}
-## 8. Coding
+##8. Coding
 
 ### Authentication
 
@@ -528,7 +527,7 @@ I can see the metadata, but it is not clear if any imaging data
 is attached. 
      
 <!-------------------------------------------------------------->
-## 9. System Design Considerations
+##9. System Design Considerations
 
 ### Hardware
 
@@ -619,7 +618,7 @@ is attached.
 
 
 <!-------------------------------------------------------------->
-## 10. To-Do
+##10. To-Do
 
 1. Look at the contents of HDF files closer
    - show images with Python script
