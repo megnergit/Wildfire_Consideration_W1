@@ -9,8 +9,8 @@
 5. [Data Access](Data Access)
 6. [Identify Available Files and What We Need](#identify-available-files-and-what-we-need)
 7. [Data Access Points](#data-access-oints)
-8. [Coding](#8-coding)
-9. [System Design Considerations](#system-design-considerations)
+8. [Coding](#coding)
+9. [System Design Considerations](#system-design)
 10. [To-Do](#to-do)
 
 
@@ -37,7 +37,7 @@ suffer from one or two of the following problems.
    fund the project. 
 
 For the discussions behind the conclusion above,
-jump to [9. System Design Considerations](#system-design-considerations).
+jump to [9. System Design Considerations](#system-design).
 
 <!------------------------------------------------------------->
 ## 2. Overview
@@ -441,7 +441,7 @@ FILENAME : MOD21A1D.A2021301.h35v10.061.2021303035120.hdf
 ```
 
 <!-------------------------------------------------------------->
-##8. Coding
+## 8. Coding<a name="coding"></a>
 
 ### Authentication
 
@@ -527,7 +527,7 @@ I can see the metadata, but it is not clear if any imaging data
 is attached. 
      
 <!-------------------------------------------------------------->
-## 9. System Design Considerations<a name="system-design-considerattions"></a>
+## 9. System Design Considerations<a name="system-design"></a>
 
 ### Hardware
 
