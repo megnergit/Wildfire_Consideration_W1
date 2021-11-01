@@ -10,11 +10,11 @@
 6. [Identify Available Files and What We Need](#identify-available-files-and-what-we-need)
 7. [Data Access Points](#data-access-oints)
 8. [Coding](#8-coding)
-9. [System Design Considerations](#9-system-design-considerations)
-10. [To-Do](#10-to-do)
+9. [System Design Considerations](#system-design-considerations)
+10. [To-Do](#to-do)
 
 
-## 1. Summary and Conclusion(#summary)
+## 1. Summary and Conclusion<a name="summary"></a>
 
 The purpose of the text is to think through the feasibility of a
 regional, fast, wildfire alarming-system that is based on the
@@ -527,7 +527,7 @@ I can see the metadata, but it is not clear if any imaging data
 is attached. 
      
 <!-------------------------------------------------------------->
-##9. System Design Considerations
+## 9. System Design Considerations<a name="system-design-considerattions"></a>
 
 ### Hardware
 
@@ -618,7 +618,7 @@ is attached.
 
 
 <!-------------------------------------------------------------->
-##10. To-Do
+## 10. To-Do<a name="to-do"></a>
 
 1. Look at the contents of HDF files closer
    - show images with Python script
