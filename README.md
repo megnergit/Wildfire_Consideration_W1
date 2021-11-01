@@ -3,17 +3,18 @@
 ## Table of contents
 
 1. [Summary and Conclusion](#summary)
-2. [Overview](Overview)
-3. [Existing Similar Services in Public](Existing Similar Services in Public)
-4. [Satellites and Projects](Satellites and Projects)
-5. [Data Access](Data Access)
-6. [Identify Available Files and What We Need](#identify-available-files-and-what-we-need)
-7. [Data Access Points](#data-access-oints)
+2. [Overview](#overview)
+3. [Existing Similar Services in Public](#public)
+4. [Satellites and Projects](#satellites)
+5. [Data Access](#data-access)
+6. [Identify Available Files and What We Need](#identify)
+7. [Data Access Points](#data-access-points)
 8. [Coding](#coding)
 9. [System Design Considerations](#system-design)
 10. [To-Do](#to-do)
 
 
+<a name="summary"></a>
 ## 1. Summary and Conclusion<a name="summary"></a>
 
 The purpose of the text is to think through the feasibility of a
@@ -40,6 +41,7 @@ For the discussions behind the conclusion above,
 jump to [9. System Design Considerations](#system-design).
 
 <!------------------------------------------------------------->
+<a name="overview"></a>
 ## 2. Overview
 
 Here we present a research on the landscape of the state-of-the-art
@@ -161,6 +163,7 @@ place on the earth has to be covered every 15 min, at least
 
 <!-------------------------------------------------------------->
 
+<a name="public"></a>
 ## 3. Existing Similar Services in Public
 
 The following two would be the similar public services that report
@@ -173,7 +176,7 @@ __EFFIS__
 
 
 <!-------------------------------------------------------------->
-
+<a name="satellites"></a>
 ## 4. Satellites and Projects
 
 What kind satellites are available as a resource of the wildfire
@@ -232,6 +235,7 @@ its data server by a Python script (as opposed to a manual web-based
 GUI).
 
 <!--------------------------------------------------------------> 
+<a name="data-access"></a>
 ## 5. Data Access 
 
 ### First I need to vent
@@ -293,7 +297,7 @@ __Conclusions:__
    (not with GUI).
 
 <!-------------------------------------------------------------->
-
+<a name="identify"></a>
 ## 6. Identify Available Files and What We Need
 
 ### Goal of data engineering
@@ -358,6 +362,7 @@ __Conclusion:__
    4. Let us look at HDF files first. 
 
 <!-------------------------------------------------------------->
+<a name="data-access-points"></a>
 ## 7. Data Access Points
 
 There are at least 7 different ways to retrieve MODIS MOD21A1 data 
@@ -528,7 +533,8 @@ I can see the metadata, but it is not clear if any imaging data
 is attached. 
      
 <!-------------------------------------------------------------->
-## 9. System Design Considerations<a name="system-design"></a>
+<a name="system-design"></a>
+## 9. System Design Considerations
 
 ### Hardware
 
@@ -619,7 +625,8 @@ is attached.
 
 
 <!-------------------------------------------------------------->
-## 10. To-Do<a name="to-do"></a>
+<a name="to-do"></a>
+## 10. To-Do
 
 1. Look at the contents of HDF files closer
    - show images with Python script
