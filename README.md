@@ -369,6 +369,7 @@ There are at least 7 different ways to retrieve MODIS MOD21A1 data
 rom its server.
 
 1. Data Pool : this leads users to LP DAAC (LP: Land Process)
+   ![Data Pool](./images/data_pool.png)
 
 2. NASA Earthdata Search : GUI base => drop
 
