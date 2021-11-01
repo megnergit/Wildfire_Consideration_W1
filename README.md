@@ -1,4 +1,5 @@
 # Wildfire Fast Alarming System - Is it feasible? 
+[TOC]
 
 ## 1. Summary and Conclusion
 
@@ -53,7 +54,7 @@ of the two below.
 At first, I was puzzled. The fast alarm would be a question that one
 can monetize most easily. Why this topic looks almost circumvented?
 
-My understanding after some research is that, indeed everbody wants to
+My understanding after some research is that, indeed everybody wants to
 tackle the fast alarm, but it is __technically highly challenging__,
 or nearly impossible. The following is the line of thought.
 
@@ -132,7 +133,7 @@ the satellite has to have a telescope with a diameter of about 8-m.
 That is impossible.
 
 2) __20-cm Telescope__\
-We shal set the size of the telescope 20-cm. The diffraction-limited
+We shall set the size of the telescope 20-cm. The diffraction-limited
 angular-resolution of the telescope is 2 arcsec at 2.2 um. The maximum
 height that this satellite can go, while still resolving 10 m on the
 ground, is 10 / (1/3600*3.14/180) = 2.1 x 10^6 m = 2100 km.
@@ -357,7 +358,7 @@ rom its server.
     : a small data-transfer program available on here
     The program takes care of authentication. 
 
-   [User Manual](https://lpdaac.usgs.gov/documents/202/DAAC2DiskUserGuide_QSeQHbQ.pdf)
+   + [User Manual](https://lpdaac.usgs.gov/documents/202/DAAC2DiskUserGuide_QSeQHbQ.pdf)
 
    + On MacOSX, we need to set a special permission in 'System Preference'
      -> 'Security & Privacy' to download the script and run it locally.
