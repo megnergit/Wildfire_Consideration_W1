@@ -376,7 +376,7 @@ rom its server.
 3. [Daac2Disk](https://lpdaac.usgs.gov/tools/daac2diskscripts/)
     : a small data-transfer program available on here
     The program takes care of authentication. 
-   ![Daac2Disk](./images/daac2disk.png)
+   ![Daac2Disk](./images/daac2disk_mac.png)
 
    + [User Manual](https://lpdaac.usgs.gov/documents/202/DAAC2DiskUserGuide_QSeQHbQ.pdf)
 
@@ -531,6 +531,8 @@ machine, get a quick HDF viewer, [`HDFView`](https://portal.hdfgroup.org/display
 
    + On MacOSX we need to set a permission at 'System Preference'
     -> 'Security & Privacy' to run the app.
+
+   ![HDFView](./images/hdfview.png)
 
 I can see the metadata, but it is not clear if any imaging data
 is attached. 
