@@ -10,7 +10,7 @@
 6. [Identify Available Files and What We Need](Identify Available Files and What We Need)
 7. [Data Access Points](Data Access Points)
 8. [Coding](#coding)
-9. [System Design Considerations](System Design Considerations)
+9. [System Design Considerations](#system-design)
 10. [To-Do](To-Do)
 
 
@@ -37,7 +37,7 @@ suffer from one or two of the following problems.
    fund the project. 
 
 For the discussions behind the conclusion above,
-jump to ## 9. System Design Considerations.
+jump to [9. System Design Considerations](#system_design).
 
 <!------------------------------------------------------------->
 ## 2. Overview
@@ -441,7 +441,8 @@ FILENAME : MOD21A1D.A2021301.h35v10.061.2021303035120.hdf
 ```
 
 <!-------------------------------------------------------------->
-## 8. Coding[](#coding)
+<a id "coding"/> 
+## 8. Coding
 
 ### Authentication
 
