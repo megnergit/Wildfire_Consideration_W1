@@ -1,7 +1,20 @@
 # Wildfire Fast Alarming System - Is it feasible? 
-[TOC]
 
-## 1. Summary and Conclusion
+## Table of contents
+
+1. [Summary and Conclusion](#summary)
+2. [Overview](Overview)
+3. [Existing Similar Services in Public](Existing Similar Services in Public)
+4. [Satellites and Projects](Satellites and Projects)
+5. [Data Access](Data Access)
+6. [Identify Available Files and What We Need](Identify Available Files and What We Need)
+7. [Data Access Points](Data Access Points)
+8. [Coding](Coding)
+9. [System Design Considerations](System Design Considerations)
+10. [To-Do](To-Do)
+
+
+## 1. Summary and Conclusion(#summary)
 
 The purpose of the text is to think through the feasibility of a
 regional, fast, wildfire alarming-system that is based on the
