@@ -376,6 +376,7 @@ rom its server.
 3. [Daac2Disk](https://lpdaac.usgs.gov/tools/daac2diskscripts/)
     : a small data-transfer program available on here
     The program takes care of authentication. 
+   ![Daac2Disk](./images/daac2disk.png)
 
    + [User Manual](https://lpdaac.usgs.gov/documents/202/DAAC2DiskUserGuide_QSeQHbQ.pdf)
 
@@ -395,6 +396,7 @@ rom its server.
    + Installer for mac does not run. => drop
 
 5. [OPenDAP](https://lpdaac.usgs.gov/tools/opendap/)
+   ![OPenDAP](./images/opendap.png)
    - [User Guide](https://earthdata.nasa.gov/collaborate/open-data-services-and-software/api/opendap/opendap-user-guide)
    - directory structure with no explanation
    - web service => drop
