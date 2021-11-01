@@ -5,11 +5,9 @@ from pathlib import Path
 import sys
 import os
 
-
-def set_cwd(CWE):
+def set_cwd(CWD):
     if Path('.').cwd != CWD:
         os.chdir(CWD)
-
 
 def get_modis(USERNAME, PASSWORD):
 
@@ -46,11 +44,8 @@ if __name__ == '__main__':
     CWD = '/Users/meg/git8/scr/'
     set_cwd(CWD)
     r = get_modis(USERNAME, PASSWORD)
-#    print(r.text)
     print(r.reason)
 
-
-#
 #
 #
 #  =========================================================
