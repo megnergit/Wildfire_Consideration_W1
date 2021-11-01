@@ -11,7 +11,7 @@
 7. [Data Access Points](Data Access Points)
 8. [Coding](#coding)
 9. [System Design Considerations](#system-design)
-10. [To-Do](To-Do)
+10. [To-Do](#to-do)
 
 
 ## 1. Summary and Conclusion(#summary)
@@ -441,7 +441,7 @@ FILENAME : MOD21A1D.A2021301.h35v10.061.2021303035120.hdf
 ```
 
 <!-------------------------------------------------------------->
-<a id "coding"/> 
+{#coding}
 ## 8. Coding
 
 ### Authentication
@@ -619,7 +619,7 @@ is attached.
 
 
 <!-------------------------------------------------------------->
-
+{#to-do}
 ## 10. To-Do
 
 1. Look at the contents of HDF files closer
